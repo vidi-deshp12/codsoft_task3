@@ -1,0 +1,61 @@
+FloatLayout:
+    MDLabel:
+        id: label
+        size_hint_x: 0.99
+        size_hint_y: 0.2
+        text_color: "black"
+        pos_hint: {"center_x": 0.84, "center_y":0.9 }
+        markup:True
+        text: "[b][u][size=43]Password Generator[/size][/u][/b]"
+
+    MDLabel:
+        id:label2
+        pos_hint: {"center_x":0.86, "center_y":0.75}
+        text_color: app.theme_cls.primary_color
+        markup:True
+        text: "[b][size=28]Customize your password[/size][/b]"
+
+    
+    MDLabel:
+        id:label2
+        pos_hint: {"center_x":0.82, "center_y":0.6}
+        text_color: app.theme_cls.primary_color
+        text: "Enter the length of your password:"
+        
+
+    MDTextField:
+        id: length_input
+        font_size: 25
+        pos_hint: {"center_x":0.7, "center_y":0.6}
+        size_hint_x:None
+        width:100
+        #current_hint_text_color:app.theme_cls.primary_color
+        #text: app.length_input_text
+
+    MDRaisedButton:
+        text: "Generate"
+        md_bg_color: app.theme_cls.primary_color
+        size_hint_x:0.2
+        size_hint_y: None
+        height:"80dp"
+        pos_hint:{"center_x":0.41, "center_y":0.41}
+        on_release:app.generate_password()
+
+    MDRaisedButton:
+        text: "Copy"
+        md_bg_color: app.theme_cls.primary_color
+        size_hint_x:0.2
+        size_hint_y: None
+        height:"80dp"
+        pos_hint:{"center_x":0.67, "center_y":0.41}
+        on_release:app.copy_password()
+
+    MDTextField:
+        id: answer
+        hint_text:"Your Password..."
+        font_size: 25
+        pos_hint: {"center_x":0.56, "center_y":0.2}
+        size_hint_x:None
+        width:400
+        current_hint_text_color:app.theme_cls.primary_color
+
